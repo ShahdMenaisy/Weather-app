@@ -1,0 +1,40 @@
+- name: Setup Docker and Run Containers
+  hosts: machines
+  become: true
+  tasks:
+    - name: Install required packages
+      yum:
+        name: yum-utils
+        state: present
+
+    - name: Add Docker repository
+      command: >
+        yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+      args:
+        creates: /etc/yum.repos.d/docker-ce.repo
+
+    - name: Install Docker
+      yum:
+        name:
+          - docker-ce
+          - docker-ce-cli
+          - containerd.io
+        state: present
+
+    - name: Start and enable Docker
+      service:
+        name: docker
+        state: started
+        enabled: yes
+
+    - name: Pull Docker image from Docker Hub
+      docker_image:
+        name: shahdabdulaziz/weather-app-image
+        source: pull 
+    - name: Run Docker container
+      docker_container:
+        name: weather-app-container
+        image: shahdabdulaziz/weather-app-image
+        state: started
+        ports:
+          - "5000:5000"
