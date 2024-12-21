@@ -62,18 +62,27 @@ Here’s a screenshot of the successful Jenkins pipeline:
 
 ![Successful Pipeline](images/SuccessfulPipeline.png)
 
+## Containers Up 
+
+Here’s a screenshot of The Containers Up and Running on both Machines:
+
+![Container Up](images/ContainerUp.png)
+
 ## Running the Application
 
-After setting everything up, you can run your application in a Docker container. Here are screenshots of the application results:
+After setting everything up, you can run your application. Here are screenshots of the application results:
 
 ### Weather Data
 
-![Weather Data](images/WeatherData.png)
+![Weather Data](images/Weather14.png)
 
 ### Temperature Plot
 
-![Temperature Plot](images/TempraturePlot.png)
+![Temperature Plot](images/Temp14.png)
 
+### Temperature Plot
+
+![Temperature Plot](images/Temp15.png)
 ## Conclusion
 
 By following the steps outlined in this README, you will be able to automate the deployment of your Python application using Jenkins, Docker, Vagrant, and Ansible. This setup ensures a streamlined and efficient deployment process.
