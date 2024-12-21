@@ -49,12 +49,6 @@ Set up a Jenkins pipeline to automate the following steps:
    - Pull the Docker image from Docker Hub on the Vagrant machines.
    - Run the Docker container from the image on the Vagrant machines.
 
-### Architecture Diagram
-
-Here’s a visual representation of the deployment pipeline:
-
-![Architecture Diagram](images/ArchitectureDiagram.png)
-
 ### Jenkins Configuration
 
 To automate the deployment process, configure Jenkins as follows:
