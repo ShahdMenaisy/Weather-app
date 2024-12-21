@@ -55,14 +55,11 @@ Set up a Jenkins pipeline to automate the following steps:
 
 To automate the deployment process, configure Jenkins as follows:
 
-1. **Install Required Plugins**: Ensure Jenkins has the necessary plugins installed (e.g., Git, Docker, Ansible).
-2. **Create a New Pipeline**: Set up a new pipeline job in Jenkins.
-3. **Configure Pipeline Script**: Use the `Jenkinsfile` provided in this repository to define the pipeline stages.
+1. **Create a New Pipeline**: Set up a new pipeline job in Jenkins.
+2. **Configure Pipeline Script**: Use the `Jenkinsfile` provided in this repository to define the pipeline stages.
 
 ## Conclusion
 
 By following the steps outlined in this README, you will be able to automate the deployment of your Python application using Jenkins, Docker, Vagrant, and Ansible. This setup ensures a streamlined and efficient deployment process.
 
 ---
-
-This version acknowledges the presence of the actual Jenkinsfile and removes the redundant sample section. It’s ready to guide users through your project efficiently! If you need any further tweaks, just let me know! 😊
