@@ -1,5 +1,3 @@
-To create a professional-looking README with the provided images, you'll want to place them strategically to enhance understanding. Here's how you could structure the README with the images:
-
 ---
 
 # DevOps Task: Automated Deployment with Jenkins, Docker, Vagrant, and Ansible
@@ -80,7 +78,7 @@ After setting everything up, you can run your application in a Docker container.
 
 ### Temperature Plot
 
-![Temperature Plot](images/TemperaturePlot.png)
+![Temperature Plot](images/TempraturePlot.png)
 
 ## Conclusion
 
