@@ -1,4 +1,4 @@
-Got it! Since you used shell commands in your Jenkinsfile, you can update the README to reflect that and remove the sample Jenkinsfile section. Here’s the revised version:
+To create a professional-looking README with the provided images, you'll want to place them strategically to enhance understanding. Here's how you could structure the README with the images:
 
 ---
 
@@ -14,7 +14,7 @@ This repository contains all the necessary files and configurations to automate 
 - **application files**: Contains the source code of the Python application, templates and requirements files.
 - **playbook.yml**: Ansible playbook for managing the deployment on Vagrant machines.
 - **inventory**: Ansible inventory file specifying the target Vagrant machines.
-- **keys/**: Folder containing private keys for Vagrant machines, enabling Jenkins to access them.
+- **keys**: Folder containing private keys for Vagrant machines, enabling Jenkins to access them.
 - **Jenkinsfile**: Defines the CI/CD pipeline for Jenkins.
 
 ## Prerequisites
@@ -51,12 +51,36 @@ Set up a Jenkins pipeline to automate the following steps:
    - Pull the Docker image from Docker Hub on the Vagrant machines.
    - Run the Docker container from the image on the Vagrant machines.
 
-## Jenkins Configuration
+### Architecture Diagram
+
+Here’s a visual representation of the deployment pipeline:
+
+![Architecture Diagram](images/ArchitectureDiagram.png)
+
+### Jenkins Configuration
 
 To automate the deployment process, configure Jenkins as follows:
 
 1. **Create a New Pipeline**: Set up a new pipeline job in Jenkins.
 2. **Configure Pipeline Script**: Use the `Jenkinsfile` provided in this repository to define the pipeline stages.
+
+### Successful Pipeline
+
+Here’s a screenshot of the successful Jenkins pipeline:
+
+![Successful Pipeline](images/SuccessfulPipeline.png)
+
+## Running the Application
+
+After setting everything up, you can run your application in a Docker container. Here are screenshots of the application results:
+
+### Weather Data
+
+![Weather Data](images/WeatherData.png)
+
+### Temperature Plot
+
+![Temperature Plot](images/TemperaturePlot.png)
 
 ## Conclusion
 
