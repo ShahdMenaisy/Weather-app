@@ -75,7 +75,7 @@ def reset():
         cursor = conn.cursor()
         cursor.execute('DELETE FROM weather')
         conn.commit()
-    return redirect(url_for('home'))
+    return send_file('static/plot.png', mimetype='image/png')
 
 def fetch_weather(city):
     try:
