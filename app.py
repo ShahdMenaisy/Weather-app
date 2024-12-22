@@ -69,6 +69,13 @@ def plot():
     plt.ylabel('Temperature (°C)')
     plt.savefig('static/plot.png')
     return send_file('static/plot.png', mimetype='image/png')
+@app.route('/reset')
+def reset():
+    with sqlite3.connect(DB_FILE) as conn:
+        cursor = conn.cursor()
+        cursor.execute('DELETE FROM weather')
+        conn.commit()
+    return redirect(url_for('home'))
 
 def fetch_weather(city):
     try:
