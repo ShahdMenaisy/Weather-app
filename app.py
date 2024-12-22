@@ -75,8 +75,8 @@ def reset():
         cursor = conn.cursor()
         cursor.execute('DELETE FROM weather')
         conn.commit()
-    return send_file('static/plot.png', mimetype='image/png')
-
+    return "Database reset successfully", 200
+    
 def fetch_weather(city):
     try:
         url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&units=metric'
