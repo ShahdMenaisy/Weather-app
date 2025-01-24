@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment { 
-        GITHUB_TOKEN = credentials('255da05b-0379-4ab0-a77c-2b07fb6c7b8c')  
-        DOCKER_IMAGE_NAME_1 = 'shahdabdulaziz/weather-app-image'
+        GITHUB_TOKEN = credentials('<GITHUB_TOKEN_CREDENTIALS_ID>')  
+        DOCKER_IMAGE_NAME_1 = '<DOCKER_IMAGE_NAME>'
     }
 
     stages {
@@ -14,7 +14,7 @@ pipeline {
                         sh 'cd weather-app && git pull'
                     } else {
                         echo "Repository doesn't exist. Performing git clone..."
-                        sh 'git clone https://$GITHUB_TOKEN@github.com/ShahdMenaisy/Weather-app weather-app'
+                        sh 'git clone https://$GITHUB_TOKEN@github.com/<USERNAME>/<REPO> weather-app'
                     }
                 }
             }
@@ -23,8 +23,8 @@ pipeline {
         stage('Login to Docker Hub') {
             steps {
                 script {
-                    withCredentials([string(credentialsId: '9bacbeb1-3729-47ba-8c5b-fb3957c3db45', variable: 'DOCKER_PASSWORD')]) {
-                        sh 'echo $DOCKER_PASSWORD | docker login -u shahdabdulaziz --password-stdin'
+                    withCredentials([string(credentialsId: '<DOCKER_PASSWORD_CREDENTIALS_ID>', variable: 'DOCKER_PASSWORD')]) {
+                        sh 'echo $DOCKER_PASSWORD | docker login -u <DOCKER_USERNAME> --password-stdin'
                     }
                 }
             }
@@ -48,8 +48,8 @@ pipeline {
             steps {
                 sh '''
                 cd weather-app
-                chmod 600 keys/private_key1
-                chmod 600 keys/private_key2
+                chmod 600 keys/<PRIVATE_KEY_1>
+                chmod 600 keys/<PRIVATE_KEY_2>
                 ansible-playbook -i inventory playbook.yml
                 '''
             }
