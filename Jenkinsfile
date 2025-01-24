@@ -48,8 +48,8 @@ pipeline {
             steps {
                 sh '''
                 cd weather-app
-                chmod 600 keys/<PRIVATE_KEY_1>
-                chmod 600 keys/<PRIVATE_KEY_2>
+                chmod 600 keys/private_key1
+                chmod 600 keys/private_key2
                 ansible-playbook -i inventory playbook.yml
                 '''
             }
